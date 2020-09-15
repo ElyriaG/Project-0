@@ -98,7 +98,7 @@ function spotify() {
 
   // Spotify API URL for for authentication with cors anywhere to address CORS errors on authentication
   var authURL =
-    "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token";
+    "https://accounts.spotify.com/api/token";
 
   //Spotify API URL to query for Playist
   var queryURL =
