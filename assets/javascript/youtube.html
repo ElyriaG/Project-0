@@ -68,6 +68,7 @@
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
+                console.log("Video Info: " + response.result.items[0].id.videoId);
               },
               function(err) { console.error("Execute error", err); });
   }
