@@ -105,9 +105,9 @@
   }
   function loader() {
     authenticate()
-    .then(loadClient())
-    .then(execute())
-    .then(Auth())
+      .then(loadClient)
+      window.setTimeout(execute,2000);
+      window.setTimeout(Auth,1000);
   }
 </script>
 <button onclick="loader()">Get Video</button>
@@ -128,3 +128,4 @@
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"
 ></script>
+return gapi.auth2.getAuthInstance()
