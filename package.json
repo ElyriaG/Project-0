@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "npm start",
     "build": "npm build",
     "test": "npm test",
     "eject": "npm eject"
