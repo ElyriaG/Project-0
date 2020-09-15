@@ -104,10 +104,10 @@
     });
   }
   function loader() {
-    authenticate();
-    loadClient();
-    execute();
-    Auth();
+    authenticate()
+    .then(loadClient())
+    .then(execute())
+    .then(Auth())
   }
 </script>
 <button onclick="loader()">Get Video</button>
