@@ -51,7 +51,7 @@
               function(err) { console.error("Error signing in", err); });
   }
   function loadClient() {
-    gapi.client.setApiKey("AIzaSyAZK-kHVeUBqwmchl5Lt1t_Osxx7Rn4ffE");
+    gapi.client.setApiKey("AIzaSyCW6rZcnHcQI27E5DHDQQliahVnV3afeE8");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
@@ -72,7 +72,7 @@
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "554751147671-hmd23rck8sdue5ki9lpr5obmung0qa59.apps.googleusercontent.com"});
+    gapi.auth2.init({client_id: "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com"});
   });
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
