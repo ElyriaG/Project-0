@@ -17,6 +17,13 @@ $(".dropdown-menu a").on("click", function () {
         }, 1500);
       });
     }
+    function waitsync2() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve('resolved');
+        }, 3000);
+      });
+    }
 
     async function authenticate() {
       const result = await waitsync();
@@ -48,6 +55,8 @@ $(".dropdown-menu a").on("click", function () {
     }
     // Make sure the client is loaded and sign-in is complete before calling this method.
     function execute() {
+      const result = await waitsync2();
+      console.log(result);
       return gapi.client.youtube.search
         .list({
           part: ["snippet"],
@@ -78,6 +87,7 @@ $(".dropdown-menu a").on("click", function () {
       });
     });
     authenticate().then(loadClient);
+    execute();
   // }
   // YouTubeFunctions();
 });
