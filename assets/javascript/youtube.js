@@ -3,13 +3,13 @@ $(".dropdown-menu a").on("click", function () {
 
   var feeling = $(this).text();
   console.log(feeling);
-  YouTubeFunctions();
-  readFunction = function(){
-    console.log("reading function.");
-  }
-  readFunction();
+  // YouTubeFunctions();
+  // readFunction = function(){
+  //   console.log("reading function.");
+  // }
+  // readFunction();
 
-  function YouTubeFunctions() {
+  // function YouTubeFunctions() {
     function authenticate() {
       return gapi.auth2
         .getAuthInstance()
@@ -67,6 +67,7 @@ $(".dropdown-menu a").on("click", function () {
           "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com",
       });
     });
-  }
+    authenticate().then(loadClient);
+  // }
   // YouTubeFunctions();
 });
