@@ -18,9 +18,9 @@ $(".dropdown-menu a").on("click", function () {
       });
     }
     function waitsync2() {
-      return new Promise(resolve => {
+      return new Promise(resolve2 => {
         setTimeout(() => {
-          resolve('resolved');
+          resolve2('resolved');
         }, 3000);
       });
     }
@@ -54,7 +54,7 @@ $(".dropdown-menu a").on("click", function () {
         );
     }
     // Make sure the client is loaded and sign-in is complete before calling this method.
-    function execute() {
+    async function execute() {
       const result2 = await waitsync2();
       console.log(result2);
       return gapi.client.youtube.search
