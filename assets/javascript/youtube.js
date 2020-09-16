@@ -55,8 +55,8 @@ $(".dropdown-menu a").on("click", function () {
     }
     // Make sure the client is loaded and sign-in is complete before calling this method.
     function execute() {
-      const result = await waitsync2();
-      console.log(result);
+      const result2 = await waitsync2();
+      console.log(result2);
       return gapi.client.youtube.search
         .list({
           part: ["snippet"],
