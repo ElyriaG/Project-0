@@ -9,8 +9,8 @@ var bearer = "";
 var tokenType = "";
 
 // Spotify API URL for for authentication with cors anywhere to address CORS errors on authentication
-var authURL =
-  "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token";
+// var authURL =
+//   "https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token";
 
 //jQuery function to capture mood choosen
 //This function also is what kicks off the API POST and GET to
@@ -25,7 +25,7 @@ $(".dropdown-menu a").on("click", function () {
 
   //API POST call to authorize using the Client Credentials 
   $.ajax({
-    url: authURL,
+    url: queryURL,
     method: "POST",
     headers: {
       Authorization:
