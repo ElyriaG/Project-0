@@ -1,5 +1,5 @@
 $(".dropdown-menu a").on("click", function () {
-  $(".divYoutube").empty();
+  // $(".divYoutube").empty();
 
   var feeling = $(this).text();
 
