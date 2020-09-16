@@ -2,8 +2,9 @@ $(".dropdown-menu a").on("click", function () {
   // $(".divYoutube").empty();
 
   var feeling = $(this).text();
+  console.log(feeling);
   YouTubeFunctions();
-  
+
   function YouTubeFunctions() {
     function authenticate() {
       return gapi.auth2
