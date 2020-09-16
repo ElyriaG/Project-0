@@ -4,6 +4,10 @@ $(".dropdown-menu a").on("click", function () {
   var feeling = $(this).text();
   console.log(feeling);
   YouTubeFunctions();
+  readFunction = function(){
+    console.log("reading function.");
+  }
+  readFunction();
 
   function YouTubeFunctions() {
     function authenticate() {
