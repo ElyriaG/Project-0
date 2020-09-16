@@ -35,7 +35,11 @@
  
 // });
 // gapi.load("client"); -->
-
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"
+></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
   /**
@@ -102,10 +106,10 @@
     });
   });
 
-  $( document ).ready(function() {
-    console.log( "ready!" );
+  $(document).ready(function () {
+    console.log("ready!");
     authenticate().then(loadClient);
-});
+  });
 </script>
 <!-- <button onclick="authenticate().then(loadClient)">authorize and load</button> -->
 <button onclick="execute()">execute</button>
@@ -120,8 +124,4 @@
   allowfullscreen
 ></iframe>
 
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
 
