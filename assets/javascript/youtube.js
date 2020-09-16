@@ -10,7 +10,17 @@ $(".dropdown-menu a").on("click", function () {
   // readFunction();
 
   // function YouTubeFunctions() {
-    function authenticate() {
+    function waitsync() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve('resolved');
+        }, 1500);
+      });
+    }
+
+    async function authenticate() {
+      const result = await waitsync();
+      console.log(result);
       return gapi.auth2
         .getAuthInstance()
         .signIn({ scope: "https://www.googleapis.com/auth/youtube.force-ssl" })
