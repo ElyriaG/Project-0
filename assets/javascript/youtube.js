@@ -1,8 +1,9 @@
 $(".dropdown-menu a").on("click", function () {
-  $(".divYoutube").empty();
+  // $(".divYoutube").empty();
 
   var feeling = $(this).text();
-
+  YouTubeFunctions();
+  
   function YouTubeFunctions() {
     function authenticate() {
       return gapi.auth2
@@ -36,7 +37,7 @@ $(".dropdown-menu a").on("click", function () {
         .list({
           part: ["snippet"],
           maxResults: 10,
-          q: "angry yoga",
+          q: feeling + " yoga",
         })
         .then(
           function (response) {
@@ -62,5 +63,5 @@ $(".dropdown-menu a").on("click", function () {
       });
     });
   }
-  YouTubeFunctions();
+  // YouTubeFunctions();
 });
