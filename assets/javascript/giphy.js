@@ -4,7 +4,7 @@ $(".dropdown-menu a").on("click", function () {
     var feeling = $(this).text();
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=FHh9mWC90FyTtVYHXSy5uFhHubUvyLWb&limit=20";
 
-    // We then created an AJAX call
+    // Ajax call to get random gif from list
     $.ajax({
         url: queryURL,
         method: "GET",
