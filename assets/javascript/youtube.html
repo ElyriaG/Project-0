@@ -95,23 +95,15 @@
         }
       );
   }
-  function Auth() {
-    gapi.load("client:auth2", function () {
-      gapi.auth2.init({
-        client_id:
-          "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com",
-      });
+  gapi.load("client:auth2", function () {
+    gapi.auth2.init({
+      client_id:
+        "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com",
     });
-  }
-  function loader() {
-    authenticate()
-      .then(loadClient)
-    //   window.setTimeout(execute,2000);
-    //   window.setTimeout(Auth,1000);
-  }
+  });
 </script>
-<button onclick="loader()">Get Video</button>
-<!-- <button onclick="execute()">execute</button> -->
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
 
 <iframe
   class="player"
@@ -126,6 +118,5 @@
 <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"
-></script>
-return gapi.auth2.getAuthInstance()
+  crossorigin="anonymous"></script>
+
