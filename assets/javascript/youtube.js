@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube API Test Page</title>
+$(".dropdown-menu a").on("click", function () {
 
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"
-  ></script>
-  <script async defer src="https://apis.google.com/js/api.js" 
-    onload="this.onload=function(){};loadClient()" 
-    onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
-</head>
-<body>
-   
-<script>
-  /**
-   * Sample JavaScript code for youtube.search.list
-   * See instructions for running APIs Explorer code samples locally:
-   * https://developers.google.com/explorer-help/guides/code_samples#javascript
-   */
+  $(".divYoutube").empty()
+
+  var feeling = $(this).text();
 
   function authenticate() {
     return gapi.auth2
@@ -82,22 +62,4 @@
     });
   });
 
-  $(document).ready(function () {
-    console.log("ready!");
-    authenticate().then(loadClient);
-  });
-</script>
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
-
-<iframe
-  class="player"
-  width="560"
-  height="315"
-  src=""
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
-</body>
-</html>
+ 
