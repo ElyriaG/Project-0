@@ -101,8 +101,13 @@
         "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com",
     });
   });
+
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    authenticate().then(loadClient);
+});
 </script>
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<!-- <button onclick="authenticate().then(loadClient)">authorize and load</button> -->
 <button onclick="execute()">execute</button>
 
 <iframe
