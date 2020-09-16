@@ -56,7 +56,7 @@ $(".dropdown-menu a").on("click", function () {
       .list({
         part: ["snippet"],
         maxResults: 10,
-        q: feeling + " yoga",
+        q: "yoga for " + feeling ,
       })
       .then(
         function (response) {
