@@ -21,7 +21,7 @@ $(".dropdown-menu a").on("click", function () {
       return new Promise(resolve2 => {
         setTimeout(() => {
           resolve2('resolved');
-        }, 3000);
+        }, 4000);
       });
     }
 
