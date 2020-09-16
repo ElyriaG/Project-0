@@ -1,6 +1,5 @@
 $(".dropdown-menu a").on("click", function () {
-
-  $(".divYoutube").empty()
+  $(".divYoutube").empty();
 
   var feeling = $(this).text();
 
@@ -61,5 +60,4 @@ $(".dropdown-menu a").on("click", function () {
         "861134492961-a4df07k1cog92g7pevh42okaj38d57cc.apps.googleusercontent.com",
     });
   });
-
- 
+});
