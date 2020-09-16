@@ -1,6 +1,7 @@
 $(".dropdown-menu a").on("click", function () {
   var feeling = $(this).text();
 
+  //Async function for login
   function waitsync() {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -8,6 +9,8 @@ $(".dropdown-menu a").on("click", function () {
       }, 1500);
     });
   }
+
+  //Async function for video
   function waitsync2() {
     return new Promise((resolve2) => {
       setTimeout(() => {
@@ -16,6 +19,7 @@ $(".dropdown-menu a").on("click", function () {
     });
   }
 
+  //Authenticate user
   async function authenticate() {
     const result = await waitsync();
     console.log(result);
@@ -44,7 +48,7 @@ $(".dropdown-menu a").on("click", function () {
         }
       );
   }
-  // Make sure the client is loaded and sign-in is complete before calling this method.
+  // Load video information
   async function execute() {
     const result2 = await waitsync2();
     console.log(result2);
@@ -56,15 +60,12 @@ $(".dropdown-menu a").on("click", function () {
       })
       .then(
         function (response) {
-          // Handle the results here (response.result has the parsed body).
-          console.log("Response", response);
-          console.log("Video Info: " + response.result.items[0].id.videoId);
-
+          //Choose a random video from response
           i = Math.floor(Math.random() * response.result.items.length);
           var urlBuild = "https://www.youtube.com/embed/";
           var videoId = response.result.items[i].id.videoId;
           var ytUrl = urlBuild + videoId;
-          var yt = $(".player").attr("src", ytUrl);
+          $(".player").attr("src", ytUrl);
         },
         function (err) {
           console.error("Execute error", err);
